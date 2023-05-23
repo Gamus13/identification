@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Page de connexion et d'inscription</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="box">
+
+        <img src="./logo2-removebg-preview.png">
+        <div class="page">
+            <div class="header">
+                <a id="login" class="active" href="#login">connexion</a>
+                <a id="signup" href="#signup">s'inscrire</a>
+            </div>
+            <div id="errorMsg"></div>
+            <div class="content">
+                <form class="login" name="loginForm" onsubmit="return validateLoginForm()" method="POST">
+                    <input type="text" name="name" id="logName" placeholder="Nom d'utilisateur">
+                    <input type="password" name="password" id="logPassword" placeholder="Mot de passe">
+                    <div id="check">
+                        <input type="checkbox" id="remember">
+                        <label for="remember">Souviens-toi de moi</label>
+                    </div>
+                    <br><br>
+                    <input type="submit" value="Connexion">
+                    <a href="#">Mot de passe oublié?</a>
+                </form>
+                <form class="signup" name="signupForm" onsubmit="return validateSignupForm()" method="POST">
+                    <input type="email" name="email" id="signEmail" placeholder="Email">
+                    <input type="text" name="name" id="signName" placeholder="Nom d'utilisateur">
+                    <input type="password" name="password" id="signPassword" placeholder="Mot de passe">
+                    <input type="password" name="password" id="signPassword2" placeholder="confirmation mot de passe"><br>
+                    <input type="submit" value="S'inscrire">
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
+</html>
